@@ -1,3 +1,8 @@
-.item {
-  color: brown;
+#gallery {
+  display: flex;
+  list-style: none;
+}
+
+#gallery li {
+  margin-right: 20px;
 }

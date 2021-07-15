@@ -22,21 +22,36 @@ const images = [
   },
 ];
 
-const listGroupImagesRef = document.querySelector("#gallery");
-console.log(listGroupImagesRef);
 
-const createElementListImagesRef = images.map( (image) => {
+for (let image of images) {
+  document.querySelector('#gallery')
+    .insertAdjacentHTML('beforeEnd', `<li><img src="${image.url}" width = 320 alt="${image.alt}" ></li>`);
+
+
+}
+
+// const listGroupImagesRef = document.querySelector("#gallery");
+
+
+// const createElementListImagesRef = ({ url, alt }) => {
     
-    const creatItemListRef = document.createElement("li");
+//     const creatItemListRef = document.createElement("li");
    
-    // createLinkRef = ` <img  src= "${image.url}" alt = "${ image.alt} ">`;
-    // // createLinkRef.type = `alt`;
-    creatItemListRef.appendChild(createLinkRef);
-    console.log(createLinkRef);
+//   const createLinkRef = document.createElement("img")
+//   createLinkRef.src = url;
+//   createLinkRef.alt = alt;
+  
+//   createLinkRef.width = 240;
 
-    return creatItemListRef
+//   // createLinkRef.style.display = flex;
+//   creatItemListRef.append(createLinkRef);
     
-})
 
-console.log(createElementListImagesRef);
-//  listGroupImagesRef.append(...createElementListImagesRef);
+//     return creatItemListRef
+    
+// }
+
+// const elemets = images.map(createElementListImagesRef)
+// console.log(elemets);
+//  listGroupImagesRef.append(...elemets);
+// console.log(createElementListImagesRef);
