@@ -1,4 +1,3 @@
-
 // Напиши скрипт для создания галлереи изображений по массиву данных.
 // <ul id="gallery"></ul>
 //     Используй массив объектов images для создания тегов img вложенных в li.
@@ -23,32 +22,53 @@ const images = [
 ];
 
 
-for (let image of images) {
-  document.querySelector('#gallery')
-    .insertAdjacentHTML('beforeEnd', `<li><img src="${image.url}" width = 320 alt="${image.alt}" ></li>`);
+// for (let image of images) {
+//   document.querySelector('#gallery')
+//     .insertAdjacentHTML('beforeEnd', `<li class="gallery__item"><img src="${image.url}" width = 320 alt="${image.alt}" ></li>`);
+ 
+// }
 
 
-}
+const galleryList = document.querySelector('#gallery');
+const addGalleryListRef = images.map(image => {
+  const addGalleryListElImg = `<li class="gallery__item"><img src="${image.url}" alt="${image.alt}" width=320 height=150></li>`;
+  return addGalleryListElImg;
+});
+galleryList.insertAdjacentHTML("beforeend", addGalleryListRef.join(' '));
+galleryList.setAttribute("style", "list-style:none; display: flex; justify-content: space-around;")
+  
+//  image.classList.add("image.item");
 
+// const galleryList = document.querySelector('#gallery');
+// const resultCreatItem = [];
+// for (let image of images) {
+
+//      gallery.appendChield(...(resultCreatItem.push(galleryList.insertAdjacentHTML('beforeEnd', `<li><img src="${image.url}" width = 320 alt="${image.alt}" ></li>`));
+
+
+// }
+
+// (...resultCreatItem);
+// console.log(gallery.appendChield(...resultCreatItem));
 // const listGroupImagesRef = document.querySelector("#gallery");
 
 
 // const createElementListImagesRef = ({ url, alt }) => {
-    
+
 //     const creatItemListRef = document.createElement("li");
-   
+
 //   const createLinkRef = document.createElement("img")
 //   createLinkRef.src = url;
 //   createLinkRef.alt = alt;
-  
+
 //   createLinkRef.width = 240;
 
 //   // createLinkRef.style.display = flex;
 //   creatItemListRef.append(createLinkRef);
-    
+
 
 //     return creatItemListRef
-    
+
 // }
 
 // const elemets = images.map(createElementListImagesRef)
