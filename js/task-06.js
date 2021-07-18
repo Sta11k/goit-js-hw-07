@@ -13,7 +13,7 @@ console.log(attributeLengthInputRef);
 inputRef.addEventListener('blur', (event) => {
 console.log(event.target.value.length );
     event.target.value.length <= attributeLengthInputRef ?
-    inputRef.setAttribute("id", "validation-input.valid") : inputRef.setAttribute("id", "validation-input.invalid")
+    inputRef.setAttribute("class", "valid") : inputRef.setAttribute("class", "invalid")
    
 });
 //  console.log(inputRef);
