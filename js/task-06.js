@@ -12,7 +12,7 @@ console.log(attributeLengthInputRef);
 
 inputRef.addEventListener('blur', (event) => {
 console.log(event.target.value.length );
-    event.target.value.length <= attributeLengthInputRef ?
+    event.target.value.length === attributeLengthInputRef ?
     inputRef.setAttribute("class", "valid") : inputRef.setAttribute("class", "invalid")
    
 });
